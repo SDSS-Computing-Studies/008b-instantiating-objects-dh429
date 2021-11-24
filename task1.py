@@ -60,7 +60,7 @@ Type of animal? cat
 Breed? Domestic Long Hair
 Name? Casey
 Owner? Chris
-Birthdate? 20015-10-01
+Birthdate? 2015-10-01
 
 1. Enter a new pet
 2. Retrieve a pet
@@ -73,3 +73,46 @@ Buster dog
 Shih-tzu is owned by Christy
 (10 points) 
 """
+def menu():
+    print("1. Enter a new pet")
+    print("2. Retrieve a pet")
+    print("3. Exit")
+
+
+class Pets:
+
+    animal = ""
+    breed = ""
+    name = ""
+    owner = ""
+    bday = ""
+
+    def __init__(self):
+        self.animal = input("Type of animal?")
+        self.breed = input("Breed?")
+        self.name = input("Name?")
+        self.owner = input("Owner?")
+        self.bday = input("Birthdate?")
+
+plist = []
+
+while True:
+    menu()
+    choice = input("")
+    if choice == "1":
+        plist.append(Pets())
+    
+    if choice == "2":
+        find = input("Which pet?")
+        for i in plist:
+            if find == plist[i].name:
+                print(plist[i].name + " " + plist[i].animal)
+                print(plist[i].breed + " is owned by " + plist[i].owner)
+
+    if choice == "3":
+        break
+        
+
+
+
+    
