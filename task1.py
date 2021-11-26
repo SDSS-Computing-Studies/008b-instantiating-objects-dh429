@@ -104,7 +104,9 @@ while True:
     
     if choice == "2":
         find = input("Which pet?")
-        for i in plist:
+        print(plist[0].__dict__)
+        print(plist[1].__dict__)
+        for i in range(len(plist)):
             if find == plist[i].name:
                 print(plist[i].name + " " + plist[i].animal)
                 print(plist[i].breed + " is owned by " + plist[i].owner)
